@@ -20,4 +20,5 @@
   --wrapper-max-width: 960px;
   --wrapper-max-width-new: 90vw;
   --wrapper-max-width-desktop: 960px;
+  --wrapper-max-width-desktop-p: 680px;
 }
