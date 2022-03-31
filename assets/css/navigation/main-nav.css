@@ -1,0 +1,113 @@
+/**
+ * 
+ * .main-nav
+ *
+ */
+
+@media (min-width: 0px) and (max-width: 960px) {
+  .main-nav,
+  .main-nav-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  /* MAIN-NAV - Container */
+  .main-nav {
+    display: flex;
+    justify-content: right;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+    margin: auto;
+    padding: 6px 0px;
+    background-color: var(--theme-color1);
+
+    _transition: 1s background-color ease;
+  }
+
+  /* UL */
+  .main-nav ul.menu {
+    display: flex;
+  }
+
+  /* LI */
+  .main-nav li.menu-item {
+    opacity: 1;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+
+  /* A */
+  .main-nav li.menu-item a {
+    display: block;
+    margin: auto;
+    color: var(--theme-color3);
+    transition: 0.5s color ease;
+  }
+  .main-nav li.menu-item a:hover {
+    color: var(--theme-basic);
+    transition: 0.5s color ease;
+  }
+
+  .main-nav li.current_page_item a,
+  .main-nav li.current-page-ancestor a {
+    color: var(--theme-basic-color2);
+  }
+
+  /**
+  * .main-nav-hidden
+  */
+
+  /* MAIN-NAV - Container */
+  .main-nav-hidden {
+    background-color: var(--theme-color5);
+    _transition: 1s background-color ease;
+  }
+
+  /* LI */
+
+  .main-nav li.current_page_item,
+  .main-nav li.current_page_ancestor {
+    opacity: 1;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+
+  /* A */
+  .main-nav-hidden li.menu-item a {
+    display: block;
+    margin: auto;
+    color: var(--theme-color3);
+    transition: 0.5s color ease;
+  }
+  .main-nav-hidden li.menu-item a:hover {
+    color: var(--theme-basic);
+    transition: 0.5s color ease;
+  }
+
+  .main-nav-hidden li.current_page_ancestor a,
+  .main-nav-hidden li.current_page_item a {
+    color: var(--theme-basic-color2);
+  }
+}
+.main-nav-hidden
+  li.menu-item
+  a:not(.current_page_item a, .current_page_ancestor a) {
+  color: var(--theme-color2);
+}
+
+.main-nav-hidden
+  li.menu-item
+  a:not(.current_page_item a, .current_page_ancestor a):hover {
+  color: var(--theme-basic);
+}

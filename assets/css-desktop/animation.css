@@ -1,0 +1,181 @@
+/* ch_menu-item */
+@keyframes ch_menu-item {
+  0% {
+    opacity: 0;
+    width: auto;
+    height: auto;
+    margin: 0px 0px;
+    padding: 6px 0px;
+    overflow: hidden;
+  }
+  10% {
+    opacity: 0;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+  40% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+  100% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+}
+
+/* chmain */
+@keyframes chmain {
+  0% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 0px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+  5% {
+    opacity: 0;
+    width: auto;
+    height: auto;
+    margin: 0px 0px;
+    padding: 6px 12px;
+    overflow: hidden;
+  }
+  10% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0px 0px;
+    padding: 6px 0px;
+    overflow: hidden;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0px 0px;
+    padding: 6px 0px;
+    overflow: hidden;
+  }
+}
+
+/* ch_current_page_item */
+@keyframes ch_current_page_item {
+  0% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+  10% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+
+  40% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+  100% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+}
+
+/* ch_current_page_item_hidden */
+@keyframes ch_current_page_item_hidden {
+  0% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+  10% {
+    opacity: 0;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+
+  40% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+  100% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 6px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+}
+
+/* chmainBack */
+@keyframes chmainBack {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0px 0px;
+    padding: 6px 0px;
+    overflow: hidden;
+  }
+  5% {
+    opacity: 0;
+    width: auto;
+    height: auto;
+    margin: 0px 0px;
+    padding: 6px 12px;
+    overflow: hidden;
+  }
+  10% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 0px;
+    padding: 6px 12px;
+    overflow: hidden;
+  }
+  100% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 0px 0px;
+    padding: 6px 12px;
+    overflow: auto;
+  }
+}

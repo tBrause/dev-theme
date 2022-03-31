@@ -1,0 +1,37 @@
+/**
+*
+* Search Input
+*
+*/
+.search-box {
+  position: fixed;
+  top: -40px;
+  left: 100px;
+  height: 40px;
+  width: auto;
+  display: block;
+  _max-width: var(--wrapper-max-width);
+  background-color: var(--theme-basic);
+}
+.display-search {
+  _display: block !important;
+  top: 10vh;
+}
+
+.wp-block-search__input {
+  display: block;
+  width: 90vw;
+  padding: 3px 9px;
+  font-size: 1.4rem;
+}
+
+.wp-block-search__inside-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 85vw;
+  _max-width: var(--wrapper-max-width);
+}
+
+.wp-block-search__label {
+  display: none;
+}

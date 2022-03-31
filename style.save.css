@@ -1,0 +1,784 @@
+@import url(./assets/css/fonts.css);
+@import url(./assets/fontawesome/css/all.min.css);
+/*@import url(./assets/css/animation.css);*/
+
+/*
+Theme Name: My First Theme
+Theme URI: 
+Author: Torsten Brause
+Author URI: 
+Description: Beschreibung des Themes
+Tags: responsive
+Version: 1.0.1
+Requires at least: 5.0
+Tested up to: 5.8
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: my-first-theme
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/**
+ *
+ * Inhaltsverzeichnis
+ * 
+ * - Browser-Reset
+ * - Schrift-Familien (@font-face)
+ * - CSS-Variablen (:root)
+ * - Grundelemente
+ * - Struktur (Layout-Raster)
+ * - Header
+ * - Navigation
+ * - Content
+ * - Sidebar
+ * - Footer
+ * - Templates
+ * - Spezielle Inhalte
+ * - @media Tablet
+ * - @media Desktop
+ *
+ */
+
+/* ------------------------------------------------------------ */
+
+/**
+ * Browser-Reset
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/**
+ * 
+ * Schrift-Familien (@font-face)
+ * extern in assets/css/fonts.css
+ *
+ */
+
+/**
+ *
+ * CSS-Variablen (:root)
+ *
+ */
+
+:root {
+  --animation-duration-time: 2s;
+  --color-body: #f5f5f5;
+  --color-txt: #226e93;
+  --color-type-hell-color1: #226e93;
+  --color-type-hell-color2: #588CA6;
+  --color-code: rgb(226, 226, 226);
+  --color-code-activ: rgba(242, 242, 242, 1);
+  --color-code-text: rgba(0, 0, 0, 1);
+  --color-code-text-activ: rgba(0, 0, 0, 1);
+  --color-code-button: rgba(34, 110, 147, 1);
+  --color-main-link-txt: rgb(202, 202, 202);
+  --color-main-link-txt-activ: rgb(255, 255, 255);
+  --color-sub-link-txt: rgba(34, 110, 147, 1);
+  --color-sub-link-li: rgba(34, 109, 147, 0.2);
+  --color-sub-link-txt-top: rgb(202, 202, 202);
+  --color-sub-link-txt-activ: rgb(255, 255, 255);
+  --color-code-button-activ: #37C217;
+  --font-size-h1: font-size: 20px;
+  --font-size-h2: font-size: 20px;
+  --font-size-h3: font-size: 20px;
+  --font-weight-h1: font-weight: 500;
+  --nav-button-activ: rgb(236, 236, 236);
+
+  --wrapper-max-width : 960px;
+}
+
+/**
+ * Grundelemente
+ */
+
+body {
+  background-color: var(--color-body);
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+  color: var(--color-txt);
+}
+
+p {
+  display: block;
+  max-width: var(--wrapper-max-width);
+  margin-bottom: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p > a {
+  display: block;
+  width: 100%;
+  background-color: var(--color-sub-link-li);
+  background-color: var(--color-code);
+  padding: 4px 8px;
+  text-decoration: underline;
+  color: var(--color-txt);
+  font-size: 1.4em;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.link-icon {
+  margin-right: 1em;
+}
+
+/**
+ * 
+ * Struktur (Layout-Raster)
+ *
+ */
+
+ /**
+  * main
+  */
+main {
+  margin: auto;
+  max-width: var(--wrapper-max-width);
+  min-height: 90vh;
+}
+
+/**
+ * Header
+ */
+header {
+  background-color: #f9f9f9;
+  _background-color: #79C0E3;
+  padding: 2em 0;
+  margin-bottom: 1em;
+}
+
+.bloginfo {
+  z-index: 999;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.bloginfo-icon {
+  margin-right: 6px;
+  font-size: 26px;
+}
+
+/**
+*
+* Footer
+*
+*/
+footer {
+  display: block;
+  width: 80vw;
+  max-width: var(--wrapper-max-width);
+  margin: 2rem auto;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/**
+ * Navigation
+ * .main-nav-full
+ * .main-nav
+ * .sub-main-nav
+ * .top-div
+ * .footer-nav
+ * .wp-block-sitemap
+ */
+
+ /**
+  * .main-nav-full
+  */
+ .main-nav-full {
+  z-index: 999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 20%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-body);
+}
+.main-nav-full-active {
+  display: block;
+}
+
+ /**
+  * .main-nav
+  */
+.main-nav {
+  _z-index: 99;
+  background-color: var(--color-type-hell-color1);
+  max-width: 100%;
+  margin: auto;
+  padding: 6px 0px;
+
+  display: flex;
+  justify-content: right;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: 1s background-color ease;
+}
+
+ /**
+  * .main-nav-hidden
+  */
+.main-nav-hidden {
+  background-color: var(--color-type-hell-color2);
+  transition: 1s background-color ease;
+}
+
+.main-nav a, .sub-main-nav a {
+  display: block;
+  margin: auto;
+}
+
+.main-nav a {
+  color: #77BDE0;  
+}
+
+.main-nav ul.menu, .sub-main-nav ul {
+  display: flex;
+  _margin-left: 20%;
+}
+
+.main-nav li.current_page_item a, 
+.main-nav li.current-page-ancestor a {
+  color: var(--color-main-link-txt-activ);
+}
+
+.nav-icons {
+  width: 30px;
+}
+
+ /**
+  * .sub-main-nav
+  */
+.sub-main-nav {
+  opacity: 1;
+  margin: auto;
+  padding: 20px 0px 20px 0px;
+  max-width: calc(var(--wrapper-max-width) + 12px);
+  position: -webkit-sticky;
+  position: sticky;
+  top:0px;
+  z-index: 997;
+  background-color: var(--color-body);
+  _background: rgb(255, 255, 255);
+  _background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(245,245,245,1) 80%, rgba(245,245,245,0) 100%); 
+  _box-shadow: 3px 3px 0px #666;
+  _transition: 1s background-color ease;
+}
+.sub-main-nav > div {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+body.hover-support .main-nav ul.menu > li > ul {
+  display: none;
+}
+
+.main-nav li.menu-item, .sub-main-nav li.page_item {
+  opacity: 1;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0px 6px;
+  padding: 6px 12px;
+  overflow: auto;
+}
+.sub-main-nav li.page_item {
+  background-color: var(--color-sub-link-li);
+}
+
+.sub-main-nav li.current_page_item:not(.current_page_item, .current_page_ancestor) {
+  background-color: var(--color-txt);
+}
+
+.sub-main-nav li.current_page_item, .sub-main-nav li.current_page_ancestor {
+  background-color: var(--color-type-hell-color1);
+  _font-weight: 700;
+}
+
+.sub-main-nav li.current_page_item a {
+  color: var(--color-sub-link-txt-activ);
+}
+
+.sub-main-nav li a {
+  color: var(--color-sub-link-txt);
+}
+.sub-main-nav-top li a {
+  color: #77BDE0;
+}
+
+.sub-main-nav-top {
+  max-width: 100%;
+  width: 100%;
+  background-color: var(--color-type-hell-color1);
+}
+.sub-main-nav-top > div {
+  width: 100%;
+  max-width: var(--wrapper-max-width);
+  margin: auto;
+}
+.sub-main-nav-top li.menu_item:not(.current_page_item, .current_page_ancestor) {
+  background-color: var(--color-type-hell-color1);
+}
+.sub-main-nav-top li.current_page_item a {
+  color: var(--color-body);
+}
+
+.main-nav-hidden li.menu-item a:not(.current_page_item a, .current_page_ancestor a) {
+  color: var(--color-main-link-txt);
+}
+
+.main-nav li.current_page_item, 
+.main-nav li.current_page_ancestor {
+  opacity: 1;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0px 6px;
+  padding: 6px 12px;
+  overflow: auto;
+}
+
+.main-nav-hidden li.current_page_ancestor a, 
+.main-nav-hidden li.current_page_item a {
+  color: #fff;
+}
+
+ /**
+  * .footer-nav
+  */
+
+.footer-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer-nav li {
+  margin-left: 12px;
+}
+.footer-nav a {
+  display: block;
+  margin: auto;
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--color-txt);
+}
+  
+ /**
+  * .Icons
+  */
+
+.top-link, 
+.bars-link, 
+.search-link {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: auto;
+  bottom:auto;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  _line-height: 0;
+  background-color: var(--color-txt);
+  color: var(--color-main-link-txt-activ);
+  text-align: center;
+}
+.search-link {
+  top: auto;
+  bottom: 80px;
+  font-size: 1.2em;
+}
+.bars-link {
+  top: 130px;
+  bottom: auto;
+  font-size: 1.2em;
+}
+.top-link {
+  top: auto;
+  bottom: 20px;
+  font-size: 2em;
+}
+
+.top-link a, 
+.bars-link a, 
+.icon-bars, 
+.search-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  _color: var(--color-main-link-txt-activ);
+}
+
+.top-icon, 
+.bars-icon {
+  margin-top: 2px;
+  padding-bottom: 6px;
+  color: var(--color-main-link-txt-activ);
+}
+
+ /**
+  * .wp-block-sitemap
+  */
+
+/* ul Sitemap */
+.wp-block-sitemap {
+  display: inline-block;
+  width: 100%;
+  max-width: var(--wrapper-max-width);
+}
+
+/* li Sitemap */
+.wp-block-sitemap li {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.4em;
+}
+
+/* a Sitemap */
+.wp-block-sitemap a {
+  display: block;
+  margin: auto;
+  padding: 6px 0px;
+  color: var(--color-txt);
+  border-bottom: 1px dotted var(--color-txt);
+}
+.wp-block-navigation-item__content:hover {
+  border-bottom: 1px solid var(--color-txt);
+}
+
+/* ul Sitemap sub */
+.wp-block-sitemap ul {
+  display: block;
+  margin-top: 1.2em;
+  padding-left: 5%;
+  margin-bottom: 2em;
+}
+/*background-color: var(--color-txt);*/
+
+
+/**
+ * Content
+ */
+
+h1 {
+  font-size: 64pt;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-weight: 300;
+  color: var(--color-txt);
+  margin: auto;
+  max-width: var(--wrapper-max-width);
+}
+h2 {
+  margin: 30px 0 16px 0;
+  color: var(--color-txt);
+  font-family: Lato, sans-serif;
+  font-size: 34pt;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+h3 {
+  margin: 32px 0 16px 0px;
+  color: var(--color-txt);
+  font-family: Lato, sans-serif;
+  font-size: 19pt;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+pre {
+  display: flex;
+}
+code {
+  font-family: "JetBrains Mono", sans-serif;
+  _font-family: "Source Code Pro", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  padding: 20px;
+  white-space: pre-line;
+  background-color: var(--color-code);
+  color: var(--color-code-text);
+
+  min-width: 680px;
+  max-width: var(--wrapper-max-width);
+  margin-bottom: 1.4rem;
+
+  border-radius: 6px;
+}
+
+
+pre button {
+  background-color: #f5f5f5;
+  min-width: 50px;
+  margin-left: 6px;
+  margin-bottom: 1.4rem;
+  text-align: center;
+  border: 0px solid #fff;
+  color: var(--color-code-button);
+  font-size: 3em;
+  cursor: pointer;
+}
+
+.wp-block-code:hover > code {
+  _background-color: white;
+}
+
+.clicked {
+  _background-color: #00212b;
+  opacity: 1;
+}
+
+/**
+ * Sidebar
+ */
+
+/**
+ * Footer
+ */
+
+/**
+ * Templates
+ */
+
+/**
+ * Spezielle Inhalte
+ */
+
+ .wp-block-button {
+   padding: 20px;
+   background-color: var(--color-txt);
+   display: inline-block;
+   _max-width: var(--wrapper-max-width);
+ }
+
+/**
+ * @media Tablet
+ */
+
+/**
+ * @media Desktop
+ */
+
+/**
+ * Animationen
+ */
+
+/* BUTTON */
+@keyframes clicked-button {
+  0% {
+    color: var(--color-code-button);
+  }
+  50% {
+    color: var(--color-code-button-activ);
+  }
+  100% {
+    color: var(--color-code-button-activ);
+  }
+}
+
+.clicked-button-ani {
+  animation-duration: var(--animation-duration-time);
+  animation-name: clicked-button;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  color: var(--color-code-button-activ);
+}
+
+/* CODE */
+@keyframes copy-code {
+  0% {
+    background-color: var(--color-code);
+    color: var(--color-code-text);
+  }
+  50% {
+    background-color: var(--color-code-activ);
+    color: var(--color-code-text-activ);
+  }
+
+  100% {
+    background-color: var(--color-code);
+    color: var(--color-code-text);
+  }
+}
+
+.copy-code-ani {
+  animation-duration: var(--animation-duration-time);
+  animation-name: copy-code;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  _animation: 5s 1;
+}
+
+/* Wechsel CODE */
+@keyframes clicky {
+  0% {
+    background-color: var(--color-code);
+    color: var(--color-code-text);
+  }
+  50% {
+    background-color: var(--color-code-activ);
+    color: var(--color-code-text-activ);
+  }
+
+  100% {
+    background-color: var(--color-code);
+    color: var(--color-code-text);
+  }
+}
+
+.copy-code-ani-reverse {
+  animation-duration: var(--animation-duration-time);
+  animation-name: clicky;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+
+.main-nav-hidden:hover > div > ul > li.menu-item:not(.current_page_item, .current_page_ancestor) {
+  opacity: 1;
+  width: auto;
+  height: auto;
+  margin: 0px 0px;
+  padding: 6px 12px;
+  overflow: auto;
+
+  animation-duration: var(--animation-duration-time);
+  animation-name: chmainBack;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+/* chmainBack */
+/* @import animation.css */
+
+.search-box {
+  z-index: 995;
+  position: fixed;
+  top: -40px;
+  left: 100px;
+  height: 40px;
+  width: auto;
+  display: block;
+  _max-width: var(--wrapper-max-width);
+  background-color: var(--color-body);
+}
+.display-search {
+  _display: block !important;
+  top: 10vh;
+
+}
+
+.search-active {
+  background-color: var(--color-code-button-activ);
+}
+
+.wp-block-search__input {
+  display: block;
+  width: 90vw;
+  padding: 3px 9px;
+  font-size: 1.4rem;
+}
+
+.wp-block-search__inside-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 85vw;
+  _max-width: var(--wrapper-max-width);
+}
+
+.wp-block-search__label {
+  display: none;
+}
+
+.icon-search, 
+.icon-bars {
+  cursor: pointer;
+}
+
+.sub-main-extern {
+  display: block;
+  width: 80vw;
+  max-width: var(--wrapper-max-width);
+  padding:20px 0px;
+  margin: 2rem auto;
+  _box-shadow: 0px 0px 2px #588CA6;
+  border-radius: 9px;
+  _border: 2px solid #588CA6;
+  _background-color: #e7e7e7;
+}
+
+#menu-themen-seiten {
+  display: flex;
+  width: 100%;
+}
+
+#menu-themen-seiten li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: 10px;
+  _border-radius: 50%;
+}
+#menu-themen-seiten li:last-child {
+  margin-right: 0px;
+}
+
+#menu-themen-seiten a {
+  width: 100%;
+  margin: auto;
+  padding: 20px 0px;
+  border-radius: 9px;
+  color: var(--color-type-hell-color2);
+  _background-color: #588CA6;
+  border: 1px solid var(--color-type-hell-color2);
+  box-shadow: 0px 0px 0px #588CA6;
+  text-align: center;
+  font-weight: 900;
+  transition: 1s color ease;
+
+}
+#menu-themen-seiten a:hover {
+  _box-shadow: 0px -7px 0px inset #588CA6;
+  color:var(--color-type-hell-color1);
+  transition: 1s color ease;
+}
+.wp-theme-info {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--color-txt);
+}

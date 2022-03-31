@@ -1,0 +1,264 @@
+/*
+Theme Name: DEV Theme
+Theme URI: 
+Author: Torsten Brause
+Author URI: 
+Description: Theme für Entwickler. Heutzutage reicht es nicht mehr ein paar Programmiersprachen zu beherschen. Deshalb habe ich mir angewöhnt, alles was ich gelernt habe zu speicher. zum kopieren von Scripts. 
+Tags: responsive
+Version: 0.0.1
+Requires at least: 5.0
+Tested up to: 5.8
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dev-theme
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/**
+ *
+ * Inhaltsverzeichnis
+ * - Import
+ *      - Fonts
+ *      - Fontawesome Icons
+ *      - Root
+ *          - Header
+ *          - Main (include HTML-Elements)
+ *          - Footer
+ *          - Icons
+ *          - Nav : Hautpnavigation (mit allen Ebenen)
+ *          - Nav : Hautpnavigation (nur Ebene 1 / für Desktop)
+ *          - Nav : Hautpnavigation (ab Ebene 2 aufwärts / für Desktop)
+ *          - Nav : weitere Themen
+ *          - Nav : WP-Sitemap
+ * - Browser-Reset
+ * - Z-Index
+ * - Body
+ *
+ */
+
+/* ------------------------------------------------------------ */
+
+/**
+ *
+ * Import
+ *
+ */
+
+/* Fonts */
+@import url(./assets/css/fonts.css);
+
+/* Fontawesome Icons */
+@import url(./assets/fontawesome/css/all.min.css);
+
+/* Root */
+@import url(./assets/css/root.css);
+
+/* Header */
+@import url(./assets/css/header.css);
+
+/* Main */
+@import url(./assets/css/main.css);
+
+/* Footer */
+@import url(./assets/css/footer.css);
+
+/* Icons */
+@import url(./assets/css/icons.css);
+
+/* Nav : Hautpnavigation (mit allen Ebenen) */
+@import url(./assets/css/navigation/main-nav-full.css);
+
+/* Nav : Hautpnavigation (nur Ebene 1 / für Desktop) */
+@import url(./assets/css/navigation/main-nav.css);
+
+/* Nav : Hautpnavigation (nur Ebene 2 / für Desktop) */
+@import url(./assets/css/navigation/sub-main-nav.css);
+
+/* Nav : weitere Themen */
+@import url(./assets/css/navigation/menu-theme-sites.css);
+
+/* Nav : WP-Sitemap */
+@import url(./assets/css/navigation/wp-block-sitemap.css);
+
+/* Search Input */
+@import url(./assets/css/search-input.css);
+
+
+/**
+ *
+ * Browser-Reset
+ *
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/**
+ * 
+ * Z-Index;
+ * 
+ */
+.bloginfo {
+  z-index: 991;
+}
+.sub-main-nav {
+  z-index: 992;
+}
+.search-box {
+  z-index: 995;
+}
+.main-nav-full {
+  z-index: 998;
+}
+
+.bars-link-button {
+    z-index: 999;
+}
+
+/**
+ *
+ * Body
+ *
+ */
+
+body {
+  background-color: var(--theme-basic);
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+  color: var(--theme-color1);
+}
+
+.bloginfo-icon {
+  margin-right: 6px;
+  font-size: 26px;
+}
+
+body.hover-support .main-nav ul.menu > li > ul {
+  display: none;
+}
+
+.wp-block-code:hover > code {
+  _background-color: white;
+}
+
+.clicked {
+  _background-color: #00212b;
+  opacity: 1;
+}
+
+/**
+ * Spezielle Inhalte
+ */
+
+.wp-block-button {
+  padding: 20px;
+  background-color: var(--theme-color1);
+  display: inline-block;
+  _max-width: var(--wrapper-max-width);
+}
+
+/* BUTTON */
+@keyframes clicked-button {
+  0% {
+    color: var(--theme-color1);
+  }
+  50% {
+    color: var(--theme-aktive);
+  }
+  100% {
+    color: var(--theme-aktive);
+  }
+}
+
+.clicked-button-ani {
+  animation-duration: var(--animation-duration-time);
+  animation-name: clicked-button;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  color: var(--theme-aktive);
+}
+
+/* CODE */
+@keyframes copy-code {
+  0% {
+    background-color: var(--theme-basic-color1);
+    color: var(--theme-color5);
+  }
+  50% {
+    background-color: var(--theme-basic-color2);
+    color: var(--theme-basic-color3);
+  }
+
+  100% {
+    background-color: var(--theme-basic-color1);
+    color: var(--theme-color5);
+  }
+}
+
+.copy-code-ani {
+  animation-duration: var(--animation-duration-time);
+  animation-name: copy-code;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  _animation: 5s 1;
+}
+
+/* Wechsel CODE */
+@keyframes clicky {
+  0% {
+    background-color: var(--theme-basic-color1);
+    color: var(--theme-color5);
+  }
+  50% {
+    background-color: var(--theme-basic-color2);
+    color: var(--theme-basic-color3);
+  }
+
+  100% {
+    background-color: var(--theme-basic-color1);
+    color: var(--theme-color5);
+  }
+}
+
+.copy-code-ani-reverse {
+  animation-duration: var(--animation-duration-time);
+  animation-name: clicky;
+  animation-direction: reverse;
+  animation-iteration-count: 1;
+}
+
+.sub-main-extern {
+  display: block;
+  width: 80vw;
+  max-width: var(--wrapper-max-width);
+  padding: 20px 0px;
+  margin: 2rem auto;
+  _box-shadow: 0px 0px 2px #588ca6;
+  border-radius: 9px;
+  _border: 2px solid #588ca6;
+  _background-color: #e7e7e7;
+}
+
+/*
+.wp-theme-info {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--theme-color1);
+}

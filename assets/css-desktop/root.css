@@ -1,0 +1,22 @@
+/**
+ * Root
+ */
+
+:root {
+  --animation-duration-time: 2s;
+
+  --theme-basic: #f5f5f5;
+  --theme-basic-color1: #dbdbdb;
+  --theme-basic-color2: #ffffff;
+  --theme-basic-color3: #363636;
+  --theme-color1: #226e93;
+  --theme-color2: #588ca6;
+  --theme-color3: #77bde0;
+  --theme-color4: #34a7e0;
+  --theme-color5: #164861;
+  --theme-color6: #cbdae1;
+  --theme-aktive: #37c217;
+
+  --wrapper-max-width: 960px;
+  --wrapper-max-width-desktop: 960px;
+}

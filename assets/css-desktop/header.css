@@ -1,0 +1,18 @@
+/**
+ * Header
+ */
+header {
+  background-color: #f9f9f9;
+  _background-color: #79c0e3;
+  padding: 2em 0;
+  margin-bottom: 1em;
+}
+
+.bloginfo {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+}
