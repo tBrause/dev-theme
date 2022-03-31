@@ -10,7 +10,7 @@
 <?php get_header(); ?>
 
 <main class="page-main">
-    <div class="wraper">front-page.php<br>
+    <div class="wraper">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
