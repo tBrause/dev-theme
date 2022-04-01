@@ -12,12 +12,6 @@
     min-height: 90vh;
   }
 
-  /* UL */
-  main ul {
-    list-style: inside;
-    margin-left: 2em;
-  }
-
   /* P */
   main p {
     display: block;
@@ -46,6 +40,12 @@
     margin: auto;
     max-width: var(--wrapper-max-width-desktop);
     min-height: 90vh;
+  }
+
+  /* UL */
+  main ul {
+    list-style: inside;
+    margin-left: 2em;
   }
 
   /* P */
