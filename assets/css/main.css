@@ -47,6 +47,7 @@
     list-style: disc;
     margin-left: 1em;
     max-width: var(--wrapper-max-width-desktop-p);
+    padding: 0 1em;
   }
 
   /* P */
