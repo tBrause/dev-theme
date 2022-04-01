@@ -56,7 +56,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import url(./assets/css/root.css);
 
 /* Header */
-@import url(./assets/css/header.css) screen and (min-width: 1024px);
+@import url(./assets/css/header.css) screen and (max-width: 1023px);
+@import url(./assets/css-desktop/header.css) screen and (min-width: 1024px);
 
 /* Main */
 @import url(./assets/css/main.css);
