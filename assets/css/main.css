@@ -111,6 +111,8 @@
     margin-bottom: 1.4rem;
 
     border-radius: 6px;
+
+    tab-size:30;
   }
 
   h2 {
