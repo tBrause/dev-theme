@@ -12,7 +12,7 @@
 
 $args = array(
     'theme_location' => 'footer_nav',
-    'items_wrap'  => '<ul class="nav-footer">%3$s</ul>',
+    'items_wrap'  => '<ul class="footer-nav">%3$s</ul>',
     'fallback_cb' => '',
     'depth' => 1,
 );
