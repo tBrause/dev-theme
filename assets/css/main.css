@@ -43,7 +43,7 @@
   }
 
   /* UL */
-  main ul {
+  main ul:not(.wp-block-sitemap) {
     list-style: inside;
     margin-left: 1em;
   }
