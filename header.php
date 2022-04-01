@@ -43,7 +43,7 @@
     ?>
 
     <!-- CSS -->
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
+    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" content="text/css; charset=UTF-8">
 
     <!-- JS -->
     <script defer src="<?php echo get_template_directory_uri(); ?>/assets/js/defer.js"></script>
