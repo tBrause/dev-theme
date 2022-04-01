@@ -4,11 +4,11 @@ Theme URI: https://github.com/tBrause/dev-theme
 Author: Torsten Brause
 Author URI: 
 Description: Theme fuer Entwickler
-Tags: responsive
+Tags: developer
 Version: 0.0.1
 Requires at least: 5.0
-Tested up to: 5.8
-Requires PHP: 8.0
+Tested up to: 5.9.2
+Requires PHP: 8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dev-theme
@@ -32,6 +32,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *          - Nav : Hautpnavigation (ab Ebene 2 aufwärts / für Desktop)
  *          - Nav : weitere Themen
  *          - Nav : WP-Sitemap
+ *          - Nav : Footer
  * - Browser-Reset
  * - Z-Index
  * - Body
