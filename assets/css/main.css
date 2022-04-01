@@ -46,6 +46,7 @@
   main ul:not(.wp-block-sitemap) {
     list-style: disc;
     margin-left: 1em;
+    max-width: var(--wrapper-max-width-desktop-p);
   }
 
   /* P */
