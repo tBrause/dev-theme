@@ -77,7 +77,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import url(./assets/css/navigation/sub-main-nav.css);
 
 /* Nav : weitere Themen */
-@import url(./assets/css/navigation/menu-theme-sites.css);
+@import url(./assets/css/navigation/theme-sites-nav.css);
 
 /* Nav : WP-Sitemap */
 @import url(./assets/css/navigation/wp-block-sitemap.css);
