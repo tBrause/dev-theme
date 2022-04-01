@@ -46,24 +46,24 @@
   main ul:not(.wp-block-sitemap) {
     list-style: disc;
     margin-left: 1em;
-    max-width: var(--wrapper-max-width-desktop-p);
+    max-width: var(--wrapper-max-width-desktop-content);
     padding: 0 1em;
   }
 
   /* P */
   main p {
     display: block;
-    max-width: var(--wrapper-max-width-desktop-p);
+    max-width: var(--wrapper-max-width-desktop-content);
     margin-bottom: 1.4rem;
   }
 
   /* A */
   main p a {
     display: inline-block;
-    width: auto;
-    min-width: 680px;
-    max-width: 680px;
-    max-width: var(--wrapper-max-width-desktop-p);
+    width: var(--wrapper-max-width-desktop-content);
+    min-width: var(--wrapper-max-width-desktop-content);
+    _max-width: 680px;
+    max-width: var(--wrapper-max-width-desktop-content);
     background-color: var(--theme-color6);
     background-color: var(--theme-basic-color1);
     padding: 4px 8px;
