@@ -16,7 +16,7 @@ footer {
   align-items: center;
 }
 
-.footer-nav ul {
+.footer-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
