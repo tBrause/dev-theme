@@ -6,21 +6,19 @@
  * im Footer
  * 
  */
-
 ?>
 
+<?php
 
-    <?php
+$args = array(
+    'theme_location' => 'footer_nav',
+    'items_wrap'  => '<nav class="nav-footer"><ul>%3$s</ul></nav>',
+    'fallback_cb' => '',
+    'depth' => 1,
+);
 
+wp_nav_menu($args);
 
-    $args = array(
-        'theme_location' => 'footer_nav',
-        'fallback_cb' => '',
-        'depth' => 1,
-    );
-
-    wp_nav_menu($args);
-
-    ?>
+?>
 
 
