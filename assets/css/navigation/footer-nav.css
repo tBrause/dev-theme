@@ -1,0 +1,16 @@
+.footer-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .footer-nav li {
+    margin-left: 12px;
+  }
+  .footer-nav a {
+    display: block;
+    margin: auto;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--theme-color1);
+  }
+  

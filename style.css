@@ -82,6 +82,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* Nav : WP-Sitemap */
 @import url(./assets/css/navigation/wp-block-sitemap.css);
 
+/* Nav : Footer */
+@import url(./assets/css/navigation/footer-nav.css);
+
 /* Search Input */
 @import url(./assets/css/search-input.css);
 
