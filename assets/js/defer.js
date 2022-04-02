@@ -394,26 +394,13 @@ function changeNav() {
   if (sub_nav) {
     const rect = sub_nav.getBoundingClientRect();
 
-    //const icon_nav = `nav-icons`;
-
     if (rect.top <= 0) {
       sub_nav.classList.add("sub-main-nav-top");
     } else {
       if (rect.top <= 100) {
         nav.classList.add("main-nav-hidden");
-
-        /*if (!document.querySelector(`div.${icon_nav}`)) {
-        addBars = document.createElement(`div`);
-        addBars.classList.add(icon_nav);
-        addBars.innerHTML = `<a href="#"><i class="top-icon fas fa-bars"></i></a>`;
-        document.body.insertBefore(addBars, document.querySelector(`main`));
-      }*/
       } else {
         nav.classList.remove("main-nav-hidden");
-
-        /*if (document.querySelector(`div.${icon_nav}`)) {
-        document.querySelector(`div.${icon_nav}`).remove();
-      }*/
       }
       sub_nav.classList.remove("sub-main-nav-top");
     }
