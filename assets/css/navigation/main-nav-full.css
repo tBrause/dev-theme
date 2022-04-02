@@ -35,7 +35,7 @@
     display: none;
   }
 
-  .main-nav-full-active {
+  .display-main-nav-full {
     display: block;
   }
 }

@@ -152,8 +152,8 @@ function displayMenu(e) {
 
   if (clickedElement) {
     console.log(clickedElement);
-    const nav_main = document.querySelector(".main-nav");
-    nav_main.classList.add("display-menu");
+    const nav_main = document.querySelector(".main-nav-full");
+    nav_main.classList.add("display-main-nav-full");
   }
 }
 
@@ -391,54 +391,59 @@ function DisplayIconNav() {
 function changeNav() {
   const nav = document.querySelector(".main-nav");
   const sub_nav = document.querySelector(".sub-main-nav");
-  const rect = sub_nav.getBoundingClientRect();
+  if (sub_nav) {
+    const rect = sub_nav.getBoundingClientRect();
 
-  //const icon_nav = `nav-icons`;
+    //const icon_nav = `nav-icons`;
 
-  if (rect.top <= 0) {
-    sub_nav.classList.add("sub-main-nav-top");
-  } else {
-    if (rect.top <= 100) {
-      nav.classList.add("main-nav-hidden");
+    if (rect.top <= 0) {
+      sub_nav.classList.add("sub-main-nav-top");
+    } else {
+      if (rect.top <= 100) {
+        nav.classList.add("main-nav-hidden");
 
-      /*if (!document.querySelector(`div.${icon_nav}`)) {
+        /*if (!document.querySelector(`div.${icon_nav}`)) {
         addBars = document.createElement(`div`);
         addBars.classList.add(icon_nav);
         addBars.innerHTML = `<a href="#"><i class="top-icon fas fa-bars"></i></a>`;
         document.body.insertBefore(addBars, document.querySelector(`main`));
       }*/
-    } else {
-      nav.classList.remove("main-nav-hidden");
+      } else {
+        nav.classList.remove("main-nav-hidden");
 
-      /*if (document.querySelector(`div.${icon_nav}`)) {
+        /*if (document.querySelector(`div.${icon_nav}`)) {
         document.querySelector(`div.${icon_nav}`).remove();
       }*/
+      }
+      sub_nav.classList.remove("sub-main-nav-top");
     }
-    sub_nav.classList.remove("sub-main-nav-top");
   }
 }
 
 function changeSubNav() {
   const sub_nav = document.querySelector(".sub-main-nav");
-  const rect = sub_nav.getBoundingClientRect();
 
-  const nav_main = document.querySelector(".main-nav");
-  const nav_main_height = nav_main.offsetHeight;
+  if (sub_nav) {
+    const rect = sub_nav.getBoundingClientRect();
 
-  if (sub_nav.style.getPropertyValue("top") != nav_main_height + "px") {
-    sub_nav.style.setProperty("top", "" + nav_main_height + "px");
-    //sub_nav.style.setProperty("max-width", "100%");
-  } else {
-    //sub_nav.style.setProperty("max-width", "var(--wrapper-max-width)");
-  }
+    const nav_main = document.querySelector(".main-nav");
+    const nav_main_height = nav_main.offsetHeight;
 
-  if (rect.top <= nav_main_height) {
-    if (sub_nav.classList.contains("sub-main-nav-top") === false) {
-      sub_nav.classList.add("sub-main-nav-top");
+    if (sub_nav.style.getPropertyValue("top") != nav_main_height + "px") {
+      sub_nav.style.setProperty("top", "" + nav_main_height + "px");
+      //sub_nav.style.setProperty("max-width", "100%");
+    } else {
+      //sub_nav.style.setProperty("max-width", "var(--wrapper-max-width)");
     }
-  } else {
-    if (sub_nav.classList.contains("sub-main-nav-top") === true) {
-      sub_nav.classList.toggle("sub-main-nav-top");
+
+    if (rect.top <= nav_main_height) {
+      if (sub_nav.classList.contains("sub-main-nav-top") === false) {
+        sub_nav.classList.add("sub-main-nav-top");
+      }
+    } else {
+      if (sub_nav.classList.contains("sub-main-nav-top") === true) {
+        sub_nav.classList.toggle("sub-main-nav-top");
+      }
     }
   }
 }
