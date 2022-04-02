@@ -19,6 +19,11 @@ function init() {
    */
   getOnTouch();
 
+  /**
+   *
+   * Selektiere alle <pre>
+   *
+   */
   const allPre = document.querySelectorAll("pre");
 
   for (const element of allPre) {
