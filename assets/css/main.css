@@ -107,8 +107,11 @@
     background-color: var(--theme-basic-color1);
     color: var(--theme-color5);
 
-    min-width: 680px;
-    max-width: var(--wrapper-max-width);
+    _min-width: 680px;
+    _max-width: var(--wrapper-max-width);
+
+    width: 680px;
+
     margin-bottom: 1.4rem;
 
     border-radius: 6px;
