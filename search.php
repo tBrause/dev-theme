@@ -82,7 +82,7 @@ $search_query = array();
              * 
              */
 
-            'echo trim($title);
+            #echo trim($title);
             ?>
         </h1>
     </header>
