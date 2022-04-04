@@ -1,39 +1,105 @@
-<?php get_header(); ?>
+<?php
 
-<main class="page-main">
-    <div class="wraper">
+/**
+ * 
+ * Header
+ * 
+ */
 
-        <?php
-        global $query_string;
-        $query_args = explode("&", $query_string);
-        $search_query = array();
+?>
+<!DOCTYPE html>
+<html lang="<?php bloginfo('language'); ?>">
 
-        foreach ($query_args as $key => $string) {
-            $query_split = explode("=", $string);
-            $search_query[$query_split[0]] = urldecode($query_split[1]);
-        } // foreach
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        $the_query = new WP_Query($search_query);
-        if ($the_query->have_posts()) :
-        ?>
-            <!-- the loop -->
+    <!-- Title -->
+    <?php
 
-            <ul>
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <li>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </li>
-                <?php endwhile; ?>
-            </ul>
-            <!-- end of the loop -->
+    /**
+     * 
+     * Hol den Titel
+     * 
+     * @ var string
+     * 
+     */
+    $title = get_the_title();
 
-            <?php wp_reset_postdata(); ?>
+    /**
+     * Selected Title-Tag
+     * IS Front-Page
+     * OR other Page-Types
+     * 
+     */
+    if (is_front_page()) {
+    ?><title><?php bloginfo('name'); ?></title>
+    <?php
+    } else {
+    ?><title><?php echo trim($title); ?></title>
+    <?php
+    }
+    ?>
 
-        <?php else : ?>
-            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-        <?php endif; ?>
+    <!-- CSS -->
+    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" content="text/css; charset=UTF-8">
 
-    </div>
-</main>
+    <!-- JS -->
+    <script defer src="<?php echo get_template_directory_uri(); ?>/assets/js/defer.js"></script>
 
-<?php get_footer(); ?>
+    <!-- Favicon -->
+
+
+    <?php
+    /**
+     * Developer Console Start
+     * only WP-Admin
+     * 
+     */
+    if (is_user_logged_in() === 1) {
+        wp_head();
+    }
+    ?>
+</head>
+
+<body>
+
+
+    <main class="page-main">
+        <div class="wraper">
+
+            <?php
+            global $query_string;
+            $query_args = explode("&", $query_string);
+            $search_query = array();
+
+            foreach ($query_args as $key => $string) {
+                $query_split = explode("=", $string);
+                $search_query[$query_split[0]] = urldecode($query_split[1]);
+            } // foreach
+
+            $the_query = new WP_Query($search_query);
+            if ($the_query->have_posts()) :
+            ?>
+                <!-- the loop -->
+
+                <ul>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <li>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+                <!-- end of the loop -->
+
+                <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+                <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+            <?php endif; ?>
+
+        </div>
+    </main>
+
+    <?php get_footer(); ?>
