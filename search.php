@@ -90,6 +90,17 @@ $search_query = array();
     get_template_part('template-parts/nav-main');
     ?>
 
+    <?php
+    /**
+     *
+     * Suchfeld
+     *
+     */
+
+    get_template_part('template-parts/search-input');
+
+    ?>
+
     <div class="bloginfo"><i class="bloginfo-icon fab fa-dev"></i><?php bloginfo('name'); ?></div>
 
     <header>
