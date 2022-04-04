@@ -73,7 +73,7 @@
 
   /* A */
   .sub-main-nav a {
-    display: block;
+    display: inline-block;
     margin: auto;
     white-space: nowrap;
   }
