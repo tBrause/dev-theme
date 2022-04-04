@@ -116,7 +116,9 @@ function displaySearchBox(e) {
     header.style.setProperty("display", "none");*/
 
     main.style.setProperty("opacity", "0");
-    subMainNav.style.setProperty("opacity", "0");
+    if (subMainNav) {
+      subMainNav.style.setProperty("opacity", "0");
+    }
     footer.style.setProperty("opacity", "0");
     subMainExtern.style.setProperty("opacity", "0");
 
