@@ -70,6 +70,26 @@ $search_query = array();
 </head>
 
 <body>
+    <?php
+    /**
+     *
+     * Hauptnavigation
+     * mit allen Ebenen
+     *
+     */
+    get_template_part('template-parts/nav-main-full');
+    ?>
+
+    <?php
+    /**
+     *
+     * Hauptnavigation
+     * nur Menüpunkte auf Ebene 1
+     *
+     */
+    get_template_part('template-parts/nav-main');
+    ?>
+
     <div class="bloginfo"><i class="bloginfo-icon fab fa-dev"></i><?php bloginfo('name'); ?></div>
 
     <header>
