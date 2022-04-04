@@ -43,6 +43,7 @@
   /* UL */
   .sub-main-nav ul {
     display: flex;
+    justify-content: left;
   }
 
   /* LI */
