@@ -16,7 +16,7 @@
   .sub-main-nav {
     opacity: 1;
     margin: auto;
-    padding: 6px 0px 6px 0px;
+    padding: 6px 0px 0px 0px;
     max-width: calc(var(--wrapper-max-width) + 12px);
     position: -webkit-sticky;
     position: sticky;
