@@ -9,6 +9,7 @@
 ?>
 
 <nav class="main-nav-home">
+    <h2>Übersicht</h2>
 
     <?php
 
@@ -16,7 +17,6 @@
     $args = array(
         'theme_location' => 'main_nav',
         'menu_class' => 'wp-block-sitemap',
-        'before' => '<h2>Übersicht</h2>',
         'fallback_cb' => '',
         'depth' => 0,
     );
