@@ -64,6 +64,33 @@
 </head>
 
 <body>
+    <div class="bloginfo"><i class="bloginfo-icon fab fa-dev"></i><?php bloginfo('name'); ?></div>
+
+    <header>
+        <h1>
+            <?php
+            /**
+             * 
+             * Header 
+             * 
+             */
+
+            echo trim($title);
+            ?>
+        </h1>
+        <?php
+        /**
+         * 
+         * Header Bild
+         * 
+         */
+        if (get_header_image() !== false) {
+        ?>
+            <img src="<?php esc_url(header_image()); ?>">
+        <?php
+        }
+        ?>
+    </header>
 
 
     <main class="page-main">
