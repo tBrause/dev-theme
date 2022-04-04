@@ -83,6 +83,10 @@
   .sub-main-nav li a {
     color: var(--theme-color1);
   }
+  .sub-main-nav li a:hover {
+    color: var(--theme-basic-color2);
+  }
+
   .sub-main-nav-top li a {
     color: var(--theme-color3);
   }
@@ -92,10 +96,10 @@
   }
 
   /**
-* 
-* Scroll-Event
-*
-*/
+  * 
+  * Scroll-Event
+  *
+  */
 
   /* NAV - Container */
   .sub-main-nav-top {
