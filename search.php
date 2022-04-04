@@ -7,6 +7,12 @@
  */
 
 ?>
+
+<?php
+global $query_string;
+$query_args = explode("&", $query_string);
+$search_query = array();
+?>
 <!DOCTYPE html>
 <html lang="<?php bloginfo('language'); ?>">
 
@@ -68,6 +74,7 @@
 
     <header>
         <h1>
+            Suchergebnisse
             <?php
             /**
              * 
@@ -75,21 +82,9 @@
              * 
              */
 
-            echo trim($title);
+            'echo trim($title);
             ?>
         </h1>
-        <?php
-        /**
-         * 
-         * Header Bild
-         * 
-         */
-        if (get_header_image() !== false) {
-        ?>
-            <img src="<?php esc_url(header_image()); ?>">
-        <?php
-        }
-        ?>
     </header>
 
 
@@ -97,10 +92,6 @@
         <div class="wraper">
 
             <?php
-            global $query_string;
-            $query_args = explode("&", $query_string);
-            $search_query = array();
-
             foreach ($query_args as $key => $string) {
                 $query_split = explode("=", $string);
                 $search_query[$query_split[0]] = urldecode($query_split[1]);
