@@ -75,6 +75,7 @@
   .sub-main-nav a {
     display: block;
     margin: auto;
+    white-space: nowrap;
   }
 
   .sub-main-nav li a {
