@@ -22,15 +22,6 @@
     position: sticky;
     top: 0px;
     background-color: var(--theme-basic);
-    _background: rgb(255, 255, 255);
-    _background: linear-gradient(
-      180deg,
-      rgba(245, 245, 245, 1) 0%,
-      rgba(245, 245, 245, 1) 80%,
-      rgba(245, 245, 245, 0) 100%
-    );
-    _box-shadow: 3px 3px 0px #666;
-    _transition: 1s background-color ease;
   }
 
   /* DIV - dyn. Wrapper*/
@@ -54,7 +45,6 @@
     width: auto;
     height: auto;
     margin: 0px 6px 12px 6px;
-    padding: 6px 12px;
     overflow: auto;
   }
 
@@ -62,8 +52,13 @@
     background-color: var(--theme-color6);
   }
 
+  .sub-main-nav li.page_item:not(.current_page_item, .current_page_ancestor):hover {
+    background-color: var(--theme-color2);
+  }
+
+
   .sub-main-nav
-    li.current_page_item:not(.current_page_item, .current_page_ancestor) {
+    li.current_page_item:not(.current_page_item, .current_page_ancestor):hover {
     background-color: var(--theme-color1);
   }
 
@@ -76,6 +71,7 @@
   /* A */
   .sub-main-nav a {
     display: inline-block;
+    padding: 6px 12px;
     margin: auto;
     white-space: nowrap;
   }
@@ -119,6 +115,11 @@
   .sub-main-nav-top li.page_item {
     background-color: var(--theme-color1);
   }
+
+  .sub-main-nav-top li.page_item:not(.current_page_item, .current_page_ancestor):hover {
+    background-color: var(--theme-color1);
+  }
+
 
   .sub-main-nav-top
     li.menu_item:not(.current_page_item, .current_page_ancestor) {
