@@ -114,6 +114,7 @@
   /* LI */
   .sub-main-nav-top li.page_item {
     background-color: var(--theme-color1);
+    margin: 0px 6px 6px 6px;
   }
 
   .sub-main-nav-top li.page_item:not(.current_page_item, .current_page_ancestor):hover {
