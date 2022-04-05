@@ -130,5 +130,6 @@
   /* A */
   .sub-main-nav-top li.current_page_item a {
     color: var(--theme-basic);
+    border: 1px solid #fff;
   }
 }
