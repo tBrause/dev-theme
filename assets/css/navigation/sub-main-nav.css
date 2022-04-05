@@ -132,4 +132,8 @@
     color: var(--theme-basic);
     border: 1px solid #fff;
   }
+  .sub-main-nav-top li a {
+    border: 1px solid #fff;
+  }
+
 }
