@@ -132,4 +132,29 @@
     line-height: 1.4;
     margin: 32px 0 16px 0px;
   }
+
+  /* youtube */
+  .wp-block-embed-youtube {
+    width: var(--wrapper-max-width-desktop-content);
+    background-color: var(--theme-basic-color1);
+    _padding:1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+  .wp-block-embed-youtube iframe {
+    width: var(--wrapper-max-width-desktop-content);
+    height: calc(var(--wrapper-max-width-desktop-content) * 0.5625);
+  }
+  .wp-block-embed-youtube figcaption {
+    width: var(--wrapper-max-width-desktop-content);
+    margin: 1em 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6em;
+    color: var(--theme-basic-color3);
+  }
+
 }
