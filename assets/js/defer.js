@@ -336,10 +336,6 @@ function DisplayIconNav() {
   const container = document.querySelector(".main-nav");
   const subNav = document.querySelector(".sub-main-nav");
 
-  const containerHeight = container.offsetHeight;
-  const subNavHeight = subNav.offsetHeight;
-  const totalHeight = containerHeight + subNavHeight + 20;
-
   const main = document.querySelector("main");
 
   const divTop = `top-link`;
@@ -352,12 +348,22 @@ function DisplayIconNav() {
     // bars
     if (!document.querySelector(`div.${divBars}`)) {
       const addBars = document.createElement("div");
+
+      // addClass
       addBars.classList.add(divBars);
 
-      console.log(totalHeight);
+      // top
+      const containerHeight = container.offsetHeight;
+      let totalHeight = 0;
+      if (subNav) {
+        const subNavHeight = subNav.offsetHeight;
+        totalHeight = totalHeight + subNavHeight;
+      }
+      totalHeight = totalHeight + containerHeight + 20;
 
       addBars.style.setProperty("top", `${totalHeight}px`);
 
+      // Icon
       addBars.innerHTML = `<span class="icon-bars"><i class="bars-icon fas fa-bars"></i></span>`;
 
       container.parentNode.appendChild(addBars);
