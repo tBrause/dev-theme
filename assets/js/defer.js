@@ -69,6 +69,32 @@ function init() {
    *
    */
   displaySearch();
+
+  cords();
+}
+
+function cords() {
+  const nav = document.querySelector(".main-nav");
+
+  if (nav.offsetHeight) {
+    const navHeight = nav.offsetHeight;
+  }
+  const navHeight = nav.offsetHeight;
+  console.log(typeof navHeight);
+
+  const subNav = document.querySelector(".sub-main-nav");
+  //if (typeof subNav == "object") {
+  const subNavHeight = subNav.offsetHeight;
+  //}
+
+  //console.log(navHeight);
+  console.log(subNavHeight);
+
+  console.log(navHeight + subNavHeight);
+
+  //.bars-link
+  const barsLink = document.querySelector(".bars-link");
+  //barsLink.style.setProperty("top", "0");
 }
 
 /**
@@ -332,7 +358,14 @@ function remove_clicked() {
  */
 function DisplayIconNav() {
   const container = document.querySelector(".main-nav");
+  const subNav = document.querySelector(".sub-main-nav");
+
+  const containerHeight = container.offsetHeight;
+  const subNavHeight = subNav.offsetHeight;
+  const totalHeight = containerHeight + subNavHeight + 20;
+
   const main = document.querySelector("main");
+
   const divTop = `top-link`;
   const divBars = `bars-link`;
   const divSearch = `search-link`;
@@ -344,6 +377,11 @@ function DisplayIconNav() {
     if (!document.querySelector(`div.${divBars}`)) {
       const addBars = document.createElement("div");
       addBars.classList.add(divBars);
+
+      console.log(totalHeight);
+
+      addBars.style.setProperty("top", `${totalHeight}px`);
+
       addBars.innerHTML = `<span class="icon-bars"><i class="bars-icon fas fa-bars"></i></span>`;
 
       container.parentNode.appendChild(addBars);
