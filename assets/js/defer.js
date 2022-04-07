@@ -70,31 +70,7 @@ function init() {
    */
   displaySearch();
 
-  cords();
-}
-
-function cords() {
-  const nav = document.querySelector(".main-nav");
-
-  if (nav.offsetHeight) {
-    const navHeight = nav.offsetHeight;
-  }
-  const navHeight = nav.offsetHeight;
-  console.log(typeof navHeight);
-
-  const subNav = document.querySelector(".sub-main-nav");
-  //if (typeof subNav == "object") {
-  const subNavHeight = subNav.offsetHeight;
-  //}
-
-  //console.log(navHeight);
-  console.log(subNavHeight);
-
-  console.log(navHeight + subNavHeight);
-
-  //.bars-link
-  const barsLink = document.querySelector(".bars-link");
-  //barsLink.style.setProperty("top", "0");
+  //cords();
 }
 
 /**
