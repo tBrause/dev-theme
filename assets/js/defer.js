@@ -122,7 +122,9 @@ function displaySearchBox(e) {
       subMainNav.style.setProperty("opacity", "0");
     }
     footer.style.setProperty("opacity", "0");
-    subMainExtern.style.setProperty("opacity", "0");
+    if (subMainExtern) {
+      subMainExtern.style.setProperty("opacity", "0");
+    }
 
     clickedElement.classList.add("search-active");
     const searchBox = document.querySelector(".search-box");
