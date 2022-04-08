@@ -165,6 +165,13 @@ function displayMenu(e) {
     console.log(clickedElement);
     const nav_main = document.querySelector(".main-nav-full");
     nav_main.classList.add("display-main-nav-full");
+
+    const closeBars = document.createElement("div");
+    closeBars.classList.add("icon-bars-close");
+    // Icon
+    closeBars.innerHTML = `<span class="icon-bars"><i class="bars-icon fas fa-times"></i></span>`;
+
+    document.querySelector("body").append(closeBars);
   }
 }
 

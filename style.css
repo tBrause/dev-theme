@@ -132,7 +132,11 @@ html {
 }
 
 .bars-link-button {
-    z-index: 999;
+    z-index: 997;
+}
+
+.icon-bars-close {
+  z-index: 999;
 }
 
 /**

@@ -5,7 +5,8 @@
 .top-link,
 .bars-link,
 .search-link,
-.bars-link-button {
+.bars-link-button, 
+.icon-bars-close {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -42,11 +43,18 @@
   font-size: 1.2em;
   right: 10px;
 }
+.icon-bars-close {
+  top: 10px;
+  bottom: auto;
+  font-size: 1.2em;
+  right: 10px;
+}
 
 .top-link a,
 .bars-link a,
 .icon-bars,
-.search-link a {
+.search-link a, 
+.icon-bars-close a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +66,8 @@
 
 .top-icon,
 .bars-icon,
-.bars-icon-button {
+.bars-icon-button, 
+.icon-bars-close {
   margin-top: 2px;
   padding-bottom: 6px;
   color: var(--theme-basic-color2);
