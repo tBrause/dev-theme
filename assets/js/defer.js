@@ -59,6 +59,7 @@ function init() {
   /**
    *
    * Funktion : openMenu(e)
+   * ruft die Funktion : closeMenu() am Ende auf
    *
    */
   openMenu();
@@ -162,8 +163,71 @@ function displayMenu(e) {
   const clickedElement = clickedButton.closest("span");
 
   if (clickedElement) {
-    console.log(clickedElement);
     const nav_main = document.querySelector(".main-nav-full");
+    nav_main.classList.add("display-main-nav-full");
+
+    const closeBars = document.createElement("div");
+    closeBars.classList.add("icon-bars-close");
+    // Icon
+    closeBars.innerHTML = `<span class="icon-bars"><i class="icon-bars-close fas fa-times"></i></span>`;
+
+    document.querySelector("body").append(closeBars);
+
+    closeMenu();
+  }
+}
+
+/**
+ *
+ * Funktion : closeMenu
+ * Klick-Event auf <div cass="icon-bars-close">
+ *
+ */
+function closeMenu() {
+  /**
+   *
+   * Click-Event
+   * Funktion : displayMenu
+   *
+   */
+  const barsIconClose = document.querySelector("div.icon-bars-close");
+  if (barsIconClose) {
+    barsIconClose.addEventListener("click", hiddenMenu);
+  }
+}
+
+function hiddenMenu(e) {
+  const clickedButton = e.target;
+  const clickedElement = clickedButton.closest("span");
+
+  if (clickedElement) {
+    const mainNavFull = document.querySelector(".main-nav-full");
+
+    if (document.querySelector(`.display-main-nav-full`)) {
+      //document.querySelector(`.main-nav-full`).remove(`.display-main-nav-full`);
+      mainNavFull.classList.remove("display-main-nav-full");
+
+      if (document.querySelector(`div.icon-bars-close`)) {
+        document.querySelector(`div.icon-bars-close`).remove();
+      }
+    }
+  }
+}
+
+/**
+ *
+ * Display
+ * Funktion : closeMenuBack
+ *
+ */
+function closeMenuBack(e) {
+  const clickedButton = e.target;
+  const clickedElement = clickedButton(".icon-bars-close");
+
+  console.log("eeeeeeeeeeeee");
+  if (clickedElement) {
+    console.log(clickedElement);
+    /* const nav_main = document.querySelector(".main-nav-full");
     nav_main.classList.add("display-main-nav-full");
 
     const closeBars = document.createElement("div");
@@ -171,7 +235,7 @@ function displayMenu(e) {
     // Icon
     closeBars.innerHTML = `<span class="icon-bars"><i class="bars-icon fas fa-times"></i></span>`;
 
-    document.querySelector("body").append(closeBars);
+    document.querySelector("body").append(closeBars);*/
   }
 }
 
@@ -483,6 +547,7 @@ function onScroll() {
   changeSubNav();
   openMenu();
   displaySearch();
+  //closeMenu();
 }
 
 window.addEventListener("scroll", onScroll, false);
