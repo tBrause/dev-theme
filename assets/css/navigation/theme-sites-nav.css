@@ -29,8 +29,8 @@
   .theme-sites-nav {
     display: flex;
     justify-content: space-between;
-    align-content: stretch;
-    _flex-wrap: wrap;
+    _align-content: stretch;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 960px;
   }
