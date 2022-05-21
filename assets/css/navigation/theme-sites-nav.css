@@ -15,6 +15,7 @@
   /* LI */
   .theme-sites-nav li {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -28,8 +29,8 @@
   /* UL */
   .theme-sites-nav {
     display: flex;
-    justify-content: space-between;
-    _align-content: stretch;
+    flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     max-width: 960px;
