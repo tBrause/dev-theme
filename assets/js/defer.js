@@ -76,6 +76,43 @@ function init() {
 
 /**
  *
+ * Suchbegriffe
+ *
+ *
+ *
+ */
+
+// suchstring
+const queryString = window.location.search;
+console.log(queryString);
+
+const urlParams = new URLSearchParams(queryString);
+const query = urlParams.get("s");
+console.log(query);
+
+const content = document.querySelector(`main`);
+//console.log(content.innerText);
+//const split = explode(" ", content.innerText);
+
+const text = content.innerText;
+const words = text.split(" ");
+console.log(words.length);
+for (const word of words) {
+  //console.log(word);
+  //console.log(word.includes(query));
+  if (word.includes(query) === true) {
+    console.log(word);
+  }
+}
+
+//const benz = document.querySelector(".benz").innerHTML;
+const result = text.replace(/<em>(.*?)<\/em>/gi, "<b>$1</b>");
+//console.log(result);
+
+//document.querySelector(".repl").innerHTML = result;
+
+/**
+ *
  * Funktion : displaySearch
  * Klick-Event auf <i cass="search-icon">
  *

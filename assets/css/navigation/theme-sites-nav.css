@@ -5,6 +5,7 @@
  */
 
 @media (min-width: 0px) and (max-width: 960px) {
+
   /* UL */
   .theme-sites-nav {
     display: block;
@@ -23,6 +24,7 @@
 }
 
 @media (min-width: 960px) {
+
   /* UL */
   .theme-sites-nav {
     display: flex;
@@ -35,9 +37,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    min-width: 100px;
     margin-right: 10px;
     _border-radius: 50%;
   }
+
   .theme-sites-nav li:last-child {
     margin-right: 0px;
   }
@@ -56,6 +60,7 @@
     font-weight: 900;
     transition: 1s color ease;
   }
+
   .theme-sites-nav a:hover {
     _box-shadow: 0px -7px 0px inset #588ca6;
     color: var(--theme-color1);

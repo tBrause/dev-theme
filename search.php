@@ -137,6 +137,21 @@ $search_query = array();
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                         <li>
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <p><?php the_excerpt(); ?></p>
+                            <!--<p><?php echo $query_args[0]; ?> hhhhhh</p>-->
+
+                            <?php
+                            foreach ($query_args as $key => $string) {
+                                $query_split = explode("=", $string);
+                                $search_query[$query_split[0]] = urldecode($query_split[1]);
+                            } // foreach
+
+                            ?>
+
+                            <!--<p><?php echo  $search_query[$query_split[0]]; ?> hhhhhh</p>-->
+
+
+                            <!--<p><?php the_content(); ?></p>-->
                         </li>
                     <?php endwhile; ?>
                 </ul>
