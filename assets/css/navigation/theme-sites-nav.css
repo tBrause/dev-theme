@@ -29,8 +29,8 @@
   /* UL */
   .theme-sites-nav {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
     max-width: 960px;
