@@ -261,7 +261,6 @@ function closeMenuBack(e) {
   const clickedButton = e.target;
   const clickedElement = clickedButton(".icon-bars-close");
 
-  console.log("eeeeeeeeeeeee");
   if (clickedElement) {
     console.log(clickedElement);
     /* const nav_main = document.querySelector(".main-nav-full");
