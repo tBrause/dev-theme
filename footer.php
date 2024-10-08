@@ -19,6 +19,7 @@ get_template_part('template-parts/nav-extern');
 ?>
 <footer>
     <div class="footer-container">
+        lllllllllllllllllllll
         <?php
         /**
          * 
