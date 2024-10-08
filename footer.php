@@ -19,7 +19,6 @@ get_template_part('template-parts/nav-extern');
 ?>
 <footer>
     <div class="footer-container">
-        lllllllllllllllllllll
         <?php
         /**
          * 
@@ -28,7 +27,7 @@ get_template_part('template-parts/nav-extern');
          */
         ?>
         <div class="wp-theme-info">
-            <!--<i class="bloginfo-icon fab fa-dev"></i>--><?php bloginfo('description'); ?> @ Torsten Brause
+            <!--<i class="bloginfo-icon fab fa-dev"></i>--><?php bloginfo('description'); ?> @ lllllllllllllllllllll Torsten Brause
         </div>
 
         <?php
