@@ -27,7 +27,7 @@ get_template_part('template-parts/nav-extern');
          */
         ?>
         <div class="wp-theme-info">
-            <!--<i class="bloginfo-icon fab fa-dev"></i>--><?php bloginfo('description'); ?> @ check Torsten Brause
+            <!--<i class="bloginfo-icon fab fa-dev"></i>--><?php bloginfo('description'); ?> @ Torsten Brause
         </div>
 
         <?php
